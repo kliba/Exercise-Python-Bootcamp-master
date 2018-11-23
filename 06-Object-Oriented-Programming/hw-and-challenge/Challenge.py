@@ -17,6 +17,7 @@ class Account:
         self.balance = balance
 
     def deposit(self, income):
+        print('Balance before transfer: ' + str(self.balance) + ', After the transaction: ' + str(self.balance + income))
         self.balance += income
         return self.balance
 
@@ -25,6 +26,7 @@ class Account:
             print("Your account is not allowed to be overdrawn")
             return self.balance
         else:
+            print('Balance before withdraw: ' + str(self.balance) + '. Current balance:' + str(self.balance - outcome))
             self.balance -= outcome
             return self.balance
 
